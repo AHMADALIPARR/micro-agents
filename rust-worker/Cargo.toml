@@ -1,0 +1,35 @@
+[package]
+name = "rust-worker"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Ephemeral inference workers (spawn/cancel/budget/deadline) with a llama.cpp FFI backend and sovereign-cmd contract validation"
+license = "MIT OR Apache-2.0"
+publish = false
+build = "build.rs"
+
+[lib]
+name = "rust_worker"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rust-worker"
+path = "src/bin/rust-worker.rs"
+
+[[bin]]
+name = "rw-bench"
+path = "src/bin/rw-bench.rs"
+
+[features]
+# llama.cpp FFI backend. Links the prebuilt libllama.so from LLAMA_DIR
+# (default /workspace/llama.cpp, build/bin); never rebuilds llama.cpp.
+default = ["llama"]
+llama = []
+
+[dependencies]
+# Path dependency: the grammar parser + ExecutionContract crate.
+sovereign-cmd = { path = "../../sovereign-cmd" }
+
+[profile.release]
+opt-level = 3
+debug = false

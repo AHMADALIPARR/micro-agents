@@ -1,0 +1,8 @@
+Task: open the log file.\nCommand:
+Task: run the agent.\nCommand:
+Task: write 42 to the buffer.\nCommand:
+Task: read the config.\nCommand:
+Task: allocate memory.\nCommand:
+Task: free the cache.\nCommand:
+Task: test the parser.\nCommand:
+Task: fix the bug.\nCommand:

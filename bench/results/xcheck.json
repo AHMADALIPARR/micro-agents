@@ -1,0 +1,1 @@
+{"agree":4128,"by_class":[[["default","contract"],42],[["default","ok"],544],[["default","structural"],1478],[["strict","contract"],119],[["strict","ok"],467],[["strict","structural"],1478]],"cases":4128,"disagreements":[],"rust_cli":"/workspace/sovereign-cmd/target/release/sovereign-cmd","wall_ms":5457.3}
